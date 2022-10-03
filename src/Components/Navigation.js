@@ -4,14 +4,16 @@ import logo from "../images/Logo.png";
 const Navigation = () => {
   return (
     <div className="navigation">
-      <div>
+      <div className="nav-logo">
         <img alt="company logo" src={logo}></img>
       </div>
-      <ul>
-        <li>ABOUT US</li>
-        <li>HEALTH COACH</li>
-        <li>COURSES</li>
-      </ul>
+      <div className="nav-div">
+        <ul className="nav-list">
+          <li className="nav-items">ABOUT US</li>
+          <li className="nav-items">HEALTH COACH</li>
+          <li className="nav-items">COURSES</li>
+        </ul>
+      </div>
     </div>
   );
 };

@@ -7,22 +7,43 @@
 }
 .App {
   text-align: center;
+  font-family: "Roboto", sans-serif;
 }
+/*navigation*/
 .navigation {
   background-color: var(--grey);
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  height: 200px;
 }
-.navigation img {
-  object-fit: contain;
+
+.nav-logo img {
+  height: 200px;
 }
-.navigation ul {
+
+.nav-list {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  align-items: center;
+  margin-right: 5rem;
 }
-.navigation li {
+.nav-items {
   color: var(--black);
   list-style: none;
+  padding: 0 2rem;
+  font-size: 18px;
+  letter-spacing: -1px;
+  font-weight: 500;
+}
+/*hero*/
+.hero-div {
+  height: 400px;
+  margin-top: 0;
+  background-color: var(--white);
+  color: var(--black);
+  font-weight: 100;
+  font-size: 80px;
+  letter-spacing: 10px;
 }
