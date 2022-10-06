@@ -47,3 +47,8 @@
   font-size: 80px;
   letter-spacing: 10px;
 }
+
+/*footer*/
+.footer-div {
+  background-color: var(--grey);
+}
