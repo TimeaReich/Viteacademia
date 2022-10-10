@@ -7,6 +7,7 @@
   --pale-blue: #cbdeeb;
   --dark-grey: #b1b6c8;
   --light-green: rgb(122, 204, 101);
+  --text-brush-color: #000;
   --time: 30s;
 
   outline: none;
@@ -67,12 +68,69 @@
   width: calc(100% * 0.3);
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
+.main-section-content {
+  align-content: flex-end;
+}
 /*blob*/
-.blob {
+.blob-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.blob-wrapper p {
+  position: relative;
+  font-family: "Comforter Brush", cursive;
+  color: var(--text-brush-color);
+  font-size: 48px;
+  mix-blend-mode: color-burn;
+  opacity: 0.5;
+}
+.blob-health {
   display: block;
   position: relative;
+  top: 170px;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 48% 52% 68% 32%/42% 28% 72% 58%;
+  background: linear-gradient(
+    to right,
+    var(--pale-green),
+    var(--grey),
+    var(--pale-green)
+  );
+  background-size: 500% 100%;
+  animation: blobber 30s 0s linear infinite,
+    cobler 30s 0s linear infinite alternate;
+}
+.blob-health-n {
+  display: block;
+  position: relative;
+  top: 170px;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 48% 52% 68% 32%/42% 28% 72% 58%;
+  background: linear-gradient(
+    to right,
+    var(--pale-blue),
+    rgb(117, 182, 235),
+    var(--pale-blue),
+    var(--dark-grey)
+  );
+  background-size: 500% 100%;
+  animation: blobber 30s -5s linear infinite,
+    cobler 30s 0s linear infinite alternate;
+}
+.blob-health-coach {
+  display: block;
+  position: relative;
+  top: 170px;
   width: 200px;
   height: 200px;
   overflow: hidden;
@@ -80,25 +138,12 @@
   background: linear-gradient(
     to right,
     var(--dark-grey),
-    var(--pale-green),
-    var(--light-green),
-    var(--grey)
+    var(--grey),
+    var(--dark-grey)
   );
   background-size: 500% 100%;
-  animation: blobber 30s 0s linear infinite,
+  animation: blobber 30s 5s linear infinite,
     cobler 30s 0s linear infinite alternate;
-}
-.blob:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  bottom: 5px;
-  left: 5px;
-  mix-blend-mode: multiply;
-  animation: blobber 30s 0s ease-in-out infinite,
-    wobbler 15s 0s linear infinite alternate;
 }
 
 @keyframes blobber {
@@ -181,22 +226,4 @@
   100% {
     transform: rotateZ(-8deg);
   }
-}
-
-.main {
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.text {
-  position: relative;
-  bottom: 100px;
-  font-size: 32px;
-  font-weight: 700;
-  mix-blend-mode: color-burn;
-  opacity: 0.6;
 }

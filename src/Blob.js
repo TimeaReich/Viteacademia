@@ -1,8 +1,9 @@
-const Blob = () => {
+const Blob = (props) => {
+  const { text, className } = props;
   return (
-    <div className="main">
-      <div className="blob"></div>
-      <p className="text">Health</p>
+    <div className="blob-wrapper">
+      <div className={className}></div>
+      <p>{text}</p>
     </div>
   );
 };
