@@ -9,7 +9,7 @@
   --light-green: rgb(122, 204, 101);
   --text-brush-color: #000;
   --time: 30s;
-
+  list-style: none;
   outline: none;
   box-sizing: border-box;
 }
@@ -39,7 +39,6 @@
 }
 .nav-items {
   color: var(--black);
-  list-style: none;
   padding: 0 2rem;
   font-size: 18px;
   letter-spacing: -1px;
@@ -59,6 +58,13 @@
 .footer-div {
   background-color: var(--grey);
 }
+.footer-div ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/*main section*/
 .main-section-container {
   /* display: flex;
   flex-direction: row;
