@@ -1,7 +1,4 @@
-import image1 from "../images/health.png";
-import image2 from "../images/nutrition.png";
-import image3 from "../images/health-coach.png";
-import Blob from "../Blob";
+import Blob from "./Blob.js";
 const MainSection = () => {
   return (
     <div className="main-section-container">
