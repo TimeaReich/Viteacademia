@@ -10,7 +10,13 @@ const Courses = (props) => {
           src={coursePicture}
         />
       </div>
-      <div className="course-card-description">{courseDescription}</div>
+      <div className="course-card-description">
+        {courseDescription}
+
+        <span>
+          <button className="course-button">Sign up</button>
+        </span>
+      </div>
     </div>
   );
 };
